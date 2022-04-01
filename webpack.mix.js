@@ -1,4 +1,5 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
+const tailwindcss = require('tailwindcss')
 
 /*
  |--------------------------------------------------------------------------
@@ -11,8 +12,19 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-]);
+mix.js('resources/js/frontend/app.js', 'public/js/frontend')
+    .postCss('resources/css/frontend/app.css', 'public/css/frontend', {}, [
+        tailwindcss('./tailwind-frontend.config.js')
+    ])
+    .options({
+        processCssUrls: false
+    })
+
+mix.js('resources/js/backend/app.js', 'public/js/backend')
+    .postCss('resources/css/backend/app.css', 'public/css/backend', {}, [
+        tailwindcss('./tailwind-backend.config.js')
+    ])
+    .options({
+        processCssUrls: false
+    })
+mix.browserSync('127.0.0.1:8000')
