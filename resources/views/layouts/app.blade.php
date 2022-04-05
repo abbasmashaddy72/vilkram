@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @if ($title)
-        <title>{{ $title }} | {{ config('app.name', 'Laravel') }}</title>
-    @else
-        <title>{{ config('app.name', 'Laravel') }}</title>
-    @endif
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     <!-- Styles -->

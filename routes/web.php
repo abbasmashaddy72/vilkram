@@ -17,8 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers\Backend'], function () {
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('homepage', 'HomePageController@index')->name('homepage');
+    Route::get('contact-us', 'ContactUsController@index')->name('contactUs');
+    Route::get('about-us', 'AboutUsController@index')->name('aboutUs');
+    Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], function () {
+        \UniSharp\LaravelFilemanager\Lfm::routes();
+    });
+    Route::resource('blog', 'BlogController');
+});
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

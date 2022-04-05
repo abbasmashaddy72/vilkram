@@ -14,9 +14,9 @@
                     <div class="hidden ml-4 rtl:ml-0 rtl:mr-4 md:block">
                         <h6 class="mb-0 text-base font-medium dark:text-gray-600">
                             {{ Auth::user()->name }}</h6>
-                        {{-- <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
-                            {{ Auth::user()->rolePermissions->name }}
-                        </p> --}}
+                        <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
+                            {{ Auth::user()->roles->pluck('name')[0] ?? 'No Role' }}
+                        </p>
                     </div>
                 </a>
                 <ul x-show="open" class="absolute right-0 z-40 w-40 p-0 py-2 bg-white" @click.outside="open = false"
@@ -106,8 +106,8 @@
                                 <div class="hidden ml-4 rtl:ml-0 rtl:mr-4 md:block">
                                     <h6 class="mb-0 text-base font-medium dark:text-gray-600">
                                         {{ Auth::user()->name }}</h6>
-                                    {{-- <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
-                                        {{ Auth::user()->rolePermissions->name }} --}}
+                                    <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
+                                        {{ Auth::user()->roles->pluck('name')[0] ?? 'No Role' }}
                                     </p>
                                 </div>
                             </a>

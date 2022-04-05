@@ -1,10 +1,12 @@
 module.exports = {
     content: [
+        './config/livewire-datatables.php',
         './resources/views/components/backend/**/*.blade.php',
         './resources/views/components/common/**/*.blade.php',
         './resources/views/layouts/backend/**/*.blade.php',
         './resources/views/layouts/app.blade.php',
         './resources/views/livewire/backend/**/*.blade.php',
+        './resources/views/livewire/datatables/**/*.blade.php',
         './resources/views/page/backend/**/*.blade.php',
         './resources/views/vendor/form-components/tailwind-3/**/*.blade.php'
     ],
