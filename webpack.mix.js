@@ -11,18 +11,20 @@ const tailwindcss = require('tailwindcss')
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.copyDirectory(
+    'node_modules/@fortawesome/fontawesome-free/webfonts',
+    'public/css/webfonts'
+)
 
-mix.js('resources/js/frontend/app.js', 'public/js/frontend')
-    .postCss('resources/css/frontend/app.css', 'public/css/frontend', {}, [
-        tailwindcss('./tailwind-frontend.config.js')
-    ])
-    .options({
-        processCssUrls: false
-    })
+mix.js('resources/js/frontend/app.js', 'public/js/frontend').postCss(
+    'resources/css/frontend/app.css',
+    'public/css/frontend',
+    [tailwindcss('./tailwind-frontend.config.js')]
+)
 
 mix.js('resources/js/backend/app.js', 'public/js/backend')
     .js('resources/js/backend/hope-ui.js', 'public/js/backend')
-    .postCss('resources/css/backend/app.css', 'public/css/backend', {}, [
+    .postCss('resources/css/backend/app.css', 'public/css/backend', [
         tailwindcss('./tailwind-backend.config.js')
     ])
     .options({

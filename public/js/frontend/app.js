@@ -22666,8 +22666,8 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/frontend/app": 0,
-/******/ 			"css/backend/app": 0,
-/******/ 			"css/frontend/app": 0
+/******/ 			"css/frontend/app": 0,
+/******/ 			"css/backend/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -22717,9 +22717,9 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/backend/app","css/frontend/app"], () => (__webpack_require__("./resources/js/frontend/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/backend/app","css/frontend/app"], () => (__webpack_require__("./resources/css/frontend/app.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/backend/app","css/frontend/app"], () => (__webpack_require__("./resources/css/backend/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/frontend/app","css/backend/app"], () => (__webpack_require__("./resources/js/frontend/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/frontend/app","css/backend/app"], () => (__webpack_require__("./resources/css/frontend/app.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/frontend/app","css/backend/app"], () => (__webpack_require__("./resources/css/backend/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

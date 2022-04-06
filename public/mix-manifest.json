@@ -2,6 +2,14 @@
     "/js/frontend/app.js": "/js/frontend/app.js",
     "/js/backend/app.js": "/js/backend/app.js",
     "/js/backend/hope-ui.js": "/js/backend/hope-ui.js",
+    "/css/frontend/app.css": "/css/frontend/app.css",
     "/css/backend/app.css": "/css/backend/app.css",
-    "/css/frontend/app.css": "/css/frontend/app.css"
+    "/css/webfonts/fa-brands-400.ttf": "/css/webfonts/fa-brands-400.ttf",
+    "/css/webfonts/fa-brands-400.woff2": "/css/webfonts/fa-brands-400.woff2",
+    "/css/webfonts/fa-regular-400.ttf": "/css/webfonts/fa-regular-400.ttf",
+    "/css/webfonts/fa-regular-400.woff2": "/css/webfonts/fa-regular-400.woff2",
+    "/css/webfonts/fa-solid-900.ttf": "/css/webfonts/fa-solid-900.ttf",
+    "/css/webfonts/fa-solid-900.woff2": "/css/webfonts/fa-solid-900.woff2",
+    "/css/webfonts/fa-v4compatibility.ttf": "/css/webfonts/fa-v4compatibility.ttf",
+    "/css/webfonts/fa-v4compatibility.woff2": "/css/webfonts/fa-v4compatibility.woff2"
 }
