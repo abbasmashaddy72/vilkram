@@ -1,63 +1,58 @@
-<!-- Navigation -->
-<nav class="navbar fixed-top">
-    <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
-
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
-
-        <!-- Image Logo -->
-        <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline"
-            href="index.html">
-            <img src="test/images/logo.svg" alt="alternative" class="h-8" />
-        </a>
-
-        <button
-            class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400"
-            type="button" data-toggle="offcanvas">
-            <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
-        </button>
-
-        <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
-            <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
-                <li>
-                    <a class="nav-link page-scroll active" href="#header">Home <span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li>
-                    <a class="nav-link page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="nav-link page-scroll" href="#details">Details</a>
-                </li>
-                <li>
-                    <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                </li>
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Drop</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item page-scroll" href="article.html">Article Details</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                    </div>
-                </li>
-                <li>
-                    <a class="nav-link page-scroll" href="#download">Download</a>
-                </li>
-            </ul>
-            <span class="block lg:ml-3.5">
-                <a class="no-underline" href="#your-link">
-                    <i
-                        class="fab fa-apple text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200 mr-1.5"></i>
+<!-- ====== Navbar Section Start -->
+<div class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent  ud-header">
+    <div class="container">
+        <div class="relative flex items-center justify-between -mx-4">
+            <div class="max-w-full px-4 w-60">
+                <a href="{{ route('welcome') }}" class="block w-full py-5 navbar-logo">
+                    <img src="assets/images/logo/logo-white.svg" alt="logo" class="w-full header-logo" />
                 </a>
-                <a class="no-underline" href="#your-link">
-                    <i
-                        class="fab fa-android text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200"></i>
-                </a>
-            </span>
-        </div> <!-- end of navbar-collapse -->
-    </div> <!-- end of container -->
-</nav> <!-- end of navbar -->
-<!-- end of navigation -->
+            </div>
+            <div class="flex items-center justify-end w-full px-4">
+                <div>
+                    <button id="navbarToggler"
+                        class="block absolute right-4 top-1/2 -translate-y-1/2 lg:hidden focus:ring-2 ring-primary px-3 py-[6px] rounded-lg">
+                        <span class="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
+                        <span class="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
+                        <span class="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
+                    </button>
+                    <nav id="navbarCollapse"
+                        class="absolute py-5 lg:py-0 lg:px-4 xl:px-6 bg-white lg:bg-transparent shadow-lg rounded-lg max-w-[250px] w-full lg:max-w-full lg:w-full right-4 top-full hidden lg:block lg:static lg:shadow-none">
+                        <ul class="blcok lg:flex">
+                            <li class="relative group">
+                                <a href="{{ route('welcome') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('aboutUs') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    About
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="#team"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Team
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('contactUs') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('blogs') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Blogs
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====== Navbar Section End -->

@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @stack('meta')
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
     <!-- Styles -->
     <link href="{{ mix('css/frontend/app.css') }}" rel="stylesheet">
@@ -13,22 +14,19 @@
     @livewireStyles
 </head>
 
-<body data-spy="scroll" data-target=".fixed-top">
+<body>
 
     @include('layouts.frontend.navbar')
 
     {{ $slot }}
 
     @include('layouts.frontend.footer')
+
     <!-- Main Scripts -->
     @livewireScripts
-    @stack('scripts')
 
-    <script src="{{ asset('js/frontend/custom/jquery.min.js') }}"></script> <!-- jQuery for JavaScript plugins -->
-    <script src="{{ asset('js/frontend/custom/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="{{ asset('js/frontend/custom/swiper.min.js') }}"></script> <!-- Swiper for image and text sliders -->
-    <script src="{{ asset('js/frontend/custom/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="{{ asset('js/frontend/custom/scripts.js') }}"></script> <!-- Custom scripts -->
+    <script src="{{ mix('js/frontend/app.js') }}"></script>
+    @stack('scripts')
 
     @if (getenv('APP_ENV') === 'local')
         <script id="__bs_script__">

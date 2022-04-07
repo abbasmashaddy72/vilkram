@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'guest', 'namespace' => 'App\Http\Controllers\Frontend'], function () {
     Route::get('/', 'HomePageController@index')->name('welcome');
+
+    Route::get('about-us', 'AboutUsController@index')->name('aboutUs');
+
+    Route::get('contact-us', 'ContactUsController@index')->name('contactUs');
+
+    Route::get('blogs', 'BlogsController@index')->name('blogs');
+
+    Route::get('blog-details', 'BlogsController@details')->name('blogDetails');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers\Backend'], function () {
