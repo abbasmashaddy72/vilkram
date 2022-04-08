@@ -932,50 +932,6 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap">
-                <div class="w-full mx-4">
-                    <div class="wow fadeInUp" data-wow-delay=".2s">
-                        <div class="mb-8 ud-title">
-                            <h6 class="relative inline-flex items-center text-xs font-normal text-body-color">
-                                Some Of Our Clients
-                                <span class="w-8 h-[1px] inline-block bg-[#afb2b5] ml-4"> </span>
-                            </h6>
-                        </div>
-                        <div class="flex flex-wrap items-center ud-brands-logo">
-                            <div class="ud-single-logo mr-10 mb-5 max-w-[140px]">
-                                <a href="https://tailgrids.com" target="_blank" rel="nofollow noopner">
-                                    <img src="assets/images/brands/tailgrids.svg" alt="tailgrids"
-                                        class="duration-300 grayscale hover:filter-none" />
-                                </a>
-                            </div>
-                            <div class="ud-single-logo mr-10 mb-5 max-w-[140px]">
-                                <a href="https://ayroui.com" target="_blank" rel="nofollow noopner">
-                                    <img src="assets/images/brands/ayroui.svg" alt="ayroui"
-                                        class="duration-300 grayscale hover:filter-none" />
-                                </a>
-                            </div>
-                            <div class="ud-single-logo mr-10 mb-5 max-w-[140px]">
-                                <a href="https://uideck.com" target="_blank" rel="nofollow noopner">
-                                    <img src="assets/images/brands/uideck.svg" alt="uideck"
-                                        class="duration-300 grayscale hover:filter-none" />
-                                </a>
-                            </div>
-                            <div class="ud-single-logo mr-10 mb-5 max-w-[140px]">
-                                <a href="https://graygrids.com" target="_blank" rel="nofollow noopner">
-                                    <img src="assets/images/brands/graygrids.svg" alt="graygrids"
-                                        class="duration-300 grayscale hover:filter-none" />
-                                </a>
-                            </div>
-                            <div class="ud-single-logo mr-10 mb-5 max-w-[140px]">
-                                <a href="https://lineicons.com" target="_blank" rel="nofollow noopner">
-                                    <img src="assets/images/brands/lineicons.svg" alt="lineicons"
-                                        class="duration-300 grayscale hover:filter-none" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- ====== Testimonials End ====== -->

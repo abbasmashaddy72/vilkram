@@ -36,13 +36,23 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'na
 
     Route::get('homepage', 'HomePageController@index')->name('homepage');
 
-    Route::get('contact-us', 'ContactUsController@index')->name('contactUs');
+    Route::resource('contact-us', 'ContactUsController')->except([
+        'store', 'update', 'destroy'
+    ]);
 
     Route::resource('about', 'AboutController')->except([
         'store', 'update', 'destroy'
     ]);
 
     Route::resource('faq', 'FaqController')->except([
+        'store', 'update', 'destroy'
+    ]);
+
+    Route::resource('review', 'ReviewController')->except([
+        'store', 'update', 'destroy'
+    ]);
+
+    Route::resource('team', 'TeamController')->except([
         'store', 'update', 'destroy'
     ]);
 
