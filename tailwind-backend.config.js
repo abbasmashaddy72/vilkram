@@ -1,5 +1,6 @@
 module.exports = {
     content: [
+        './app/Http/Livewire/Tables/Backend/**/*.php',
         './config/livewire-datatables.php',
         './resources/views/auth/**/*.blade.php',
         './resources/views/components/backend/**/*.blade.php',
@@ -10,7 +11,8 @@ module.exports = {
         './resources/views/livewire/datatables/**/*.blade.php',
         './resources/views/livewire/form/backend/**/*.blade.php',
         './resources/views/pages/backend/**/*.blade.php',
-        './resources/views/vendor/form-components/tailwind-3/**/*.blade.php'
+        './resources/views/vendor/form-components/tailwind-3/**/*.blade.php',
+        './vendor/mckenziearts/laravel-notify/**/*.blade.php'
     ],
     darkMode: 'class',
     theme: {
@@ -48,13 +50,22 @@ module.exports = {
         },
         extend: {
             zIndex: {
-                '-10': '-10'
+                '-10': '-10',
+                '60': '60',
+                '70': '70',
+                '80': '80',
+                '90': '90',
+                '100': '100'
             },
             transitionTimingFunction: {
                 'in-expo': 'ease'
             },
             textColor: {
                 heading: '#232d42'
+            },
+            inset: {
+                '0': 0,
+                '-14': '-3.5rem'
             },
             colors: {
                 container: '#f5f6fa',
@@ -191,8 +202,30 @@ module.exports = {
                 },
                 sideblue: '#3a57e8',
                 sideblack: '#212529',
-                sidehover: '#ffffff20'
+                sidehover: '#ffffff20',
+                success: '#47D764',
+                info: '#2E86EB',
+                warning: '#FFC022',
+                danger: '#ED3063'
             }
+        },
+        backgroundImage: {
+            'gradient-to-t':
+                'linear-gradient(to top, var(--gradient-color-stops))',
+            'gradient-to-tr':
+                'linear-gradient(to top right, var(--gradient-color-stops))',
+            'gradient-to-r':
+                'linear-gradient(to right, var(--gradient-color-stops))',
+            'gradient-to-br':
+                'linear-gradient(to bottom right, var(--gradient-color-stops))',
+            'gradient-to-b':
+                'linear-gradient(to bottom, var(--gradient-color-stops))',
+            'gradient-to-bl':
+                'linear-gradient(to bottom left, var(--gradient-color-stops))',
+            'gradient-to-l':
+                'linear-gradient(to left, var(--gradient-color-stops))',
+            'gradient-to-tl':
+                'linear-gradient(to top left, var(--gradient-color-stops))'
         }
     },
     corePlugins: {

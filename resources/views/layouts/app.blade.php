@@ -21,6 +21,7 @@
 </head>
 
 <body class="overflow-x-hidden bg-body dark:bg-dark-bg">
+    <x:notify-messages />
 
     @include('layouts.backend.loader')
 
@@ -51,6 +52,7 @@
     @stack('scripts')
     <script src="{{ asset('js/backend/hope-ui.js') }}"></script>
     <script src="{{ asset('js/backend/app.js') }}"></script>
+    @notifyJs
 
     <!-- Browser Sync -->
     @if (getenv('APP_ENV') === 'local')

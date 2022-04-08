@@ -31,9 +31,21 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="#team"
+                                <a href="{{ route('features') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Team
+                                    Features
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('blogs') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Blogs
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('teams') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Teams
                                 </a>
                             </li>
                             <li class="relative group">
@@ -43,9 +55,9 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="{{ route('blogs') }}"
+                                <a href="{{ route('faq') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Blogs
+                                    FAQ's
                                 </a>
                             </li>
                         </ul>

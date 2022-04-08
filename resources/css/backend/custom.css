@@ -703,3 +703,8 @@ html {
 [dir="rtl"] .R {
     right: 0rem !important;
 }
+
+.notify {
+    z-index: 999;
+    top: 10% !important;
+}

@@ -2,27 +2,25 @@
 
 namespace App\Http\Livewire\Form\Backend;
 
-use App\Models\Blog;
+use App\Models\About;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class BlogCEV extends Component
+class AboutCEV extends Component
 {
     use WithFileUploads;
 
     // Model Values
-    public $title, $image, $tags, $excerpt, $description;
+    public $title, $image, $excerpt;
 
     // Custom Values
-    public $action, $isUploaded = false, $blog;
+    public $action, $isUploaded = false, $about;
 
     protected $rules = [
         'title' => '',
         'image' => '',
-        'tags' => '',
         'excerpt' => '',
-        'description' => '',
     ];
 
     public function updated($propertyName)
@@ -39,14 +37,14 @@ class BlogCEV extends Component
         $validatedData = $this->validate();
 
         if (gettype($this->image) != 'string') {
-            $validatedData['image'] = $this->image->store('blog_images');
+            $validatedData['image'] = $this->image->store('about_images');
         }
 
-        Blog::create($validatedData);
+        About::create($validatedData);
 
-        notify()->success('Blog Saved Successfully!');
+        notify()->success('About Saved Successfully!');
 
-        return $this->redirectRoute('admin.blog.index');
+        return $this->redirectRoute('admin.about.index');
     }
 
     public function update()
@@ -54,31 +52,29 @@ class BlogCEV extends Component
         $validatedData = $this->validate();
 
         if (gettype($this->image) != 'string') {
-            $validatedData['image'] = $this->image->store('blog_images');
+            $validatedData['image'] = $this->image->store('about_images');
         }
 
-        Blog::where('id', $this->blog)->update($validatedData);
+        About::where('id', $this->about)->update($validatedData);
 
-        notify()->success('Blog Updated Successfully!');
+        notify()->success('About Updated Successfully!');
 
-        return $this->redirectRoute('admin.blog.index');
+        return $this->redirectRoute('admin.about.index');
     }
 
-    public function mount($blog)
+    public function mount($about)
     {
         if (substr(strstr(Route::currentRouteAction(), '@'), 1) != 'create') {
-            $data = Blog::findOrFail($blog);
+            $data = About::findOrFail($about);
             $this->title = $data->title;
             $this->image = $data->image;
-            $this->tags = $data->tags;
             $this->excerpt = $data->excerpt;
-            $this->description = $data->description;
         }
         $this->action = substr(strstr(Route::currentRouteAction(), '@'), 1);
     }
 
     public function render()
     {
-        return view('livewire.form.backend.blog-c-e-v');
+        return view('livewire.form.backend.about-c-e-v');
     }
 }
