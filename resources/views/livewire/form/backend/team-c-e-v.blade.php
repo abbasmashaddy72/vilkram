@@ -14,9 +14,11 @@
 
     <x-form-input name="qualification" label="Qualification" type="text" />
 
+    <x-form-input name="department" label="Department" type="text" />
+
     <x-form-textarea name="about" label="About" required />
 
-    <x-form-input name="experience" label="Experience(Starting Year)" type="number" />
+    <x-form-input name="experience" label="Experience(Started At)" type="date" />
 
     <x-backend.single-upload name="image" label="Image" />
     @endwire

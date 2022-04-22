@@ -7,7 +7,8 @@ module.exports = {
         './resources/views/layouts/guest.blade.php',
         './resources/views/livewire/form/frontend/**/*.blade.php',
         './resources/views/pages/frontend/**/*.blade.php',
-        './resources/views/vendor/form-components/tailwind-3/**/*.blade.php'
+        './resources/views/vendor/form-components/tailwind-3/**/*.blade.php',
+        './resources/views/vendor/livewire/**/*.blade.php'
     ],
     theme: {
         screens: {

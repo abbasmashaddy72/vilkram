@@ -12,7 +12,7 @@ class TeamCEV extends Component
     use WithFileUploads;
 
     // Model Values
-    public $name, $image, $qualification, $about, $experience;
+    public $name, $image, $qualification, $department, $about, $experience;
 
     // Custom Values
     public $action, $isUploaded = false, $team;
@@ -21,6 +21,7 @@ class TeamCEV extends Component
         'name' => '',
         'image' => '',
         'qualification' => '',
+        'department' => '',
         'about' => '',
         'experience' => '',
     ];
@@ -71,6 +72,7 @@ class TeamCEV extends Component
             $this->name = $data->name;
             $this->image = $data->image;
             $this->qualification = $data->qualification;
+            $this->department = $data->department;
             $this->about = $data->about;
             $this->experience = $data->experience;
         }

@@ -16,7 +16,7 @@
 
     <x-form-textarea name="excerpt" label="Excerpt" required />
 
-    <x-form-input name="link" label="Link" type="text" />
+    <x-form-input name="link" label="Link(If NA copy & paste javascript:void(0))" type="text" />
     @endwire
 
     <div class="mt-3">

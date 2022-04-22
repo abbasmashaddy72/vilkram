@@ -13,7 +13,12 @@ class Team extends Model
         'name',
         'image',
         'qualification',
+        'department',
         'about',
         'experience',
+    ];
+
+    protected $casts = [
+        'experience' => 'date:Y-m-d',
     ];
 }

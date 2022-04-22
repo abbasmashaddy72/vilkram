@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faq;
 
 class FAQController extends Controller
 {
     public function index()
     {
-        return view('pages.frontend.faq');
+        $faqs = Faq::get();
+
+        return view('pages.frontend.faq', compact([
+            'faqs'
+        ]));
     }
 }

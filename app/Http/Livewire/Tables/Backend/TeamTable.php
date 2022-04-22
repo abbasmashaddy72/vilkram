@@ -38,6 +38,11 @@ class TeamTable extends LivewireDatatable
                 ->filterable()
                 ->label('Qualification'),
 
+            Column::name('department')
+                ->searchable()
+                ->filterable()
+                ->label('Department'),
+
             Column::name('about')
                 ->searchable()
                 ->truncate(20)

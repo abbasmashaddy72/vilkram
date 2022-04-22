@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('qualification');
+            $table->string('department');
             $table->text('about');
-            $table->integer('experience');
+            $table->date('experience');
             $table->timestamps();
         });
     }

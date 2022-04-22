@@ -5135,21 +5135,18 @@ window.wow = new WOW.WOW({
   window.onscroll = function () {
     var ud_header = document.querySelector('.ud-header');
     var sticky = ud_header.offsetTop;
-    var logo = document.querySelector('.header-logo');
-
-    if (window.pageYOffset > sticky) {
-      ud_header.classList.add('sticky');
-    } else {
-      ud_header.classList.remove('sticky');
-    } // === logo change
-
-
-    if (ud_header.classList.contains('sticky')) {
-      logo.src = 'assets/images/logo/logo.svg';
-    } else {
-      logo.src = 'assets/images/logo/logo-white.svg';
-    } // show or hide the back-top-top button
-
+    var logo = document.querySelector('.header-logo'); // if (window.pageYOffset > sticky) {
+    //     ud_header.classList.add('sticky')
+    // } else {
+    //     ud_header.classList.remove('sticky')
+    // }
+    // // === logo change
+    // if (ud_header.classList.contains('sticky')) {
+    //     logo.src = 'assets/images/logo/logo.svg'
+    // } else {
+    //     logo.src = 'assets/images/logo/logo-white.svg'
+    // }
+    // show or hide the back-top-top button
 
     var backToTop = document.querySelector('.back-to-top');
 
