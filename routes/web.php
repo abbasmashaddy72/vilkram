@@ -14,23 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function () {
-    Route::get('/', 'HomePageController@index')->name('welcome');
+    Route::get('/', 'FrontendController@index')->name('welcome');
 
-    Route::get('about-us', 'AboutUsController@index')->name('aboutUs');
+    Route::get('about-us', 'FrontendController@about_us')->name('aboutUs');
 
-    Route::get('teams', 'TeamController@index')->name('teams');
+    Route::get('teams', 'FrontendController@teams')->name('teams');
 
-    Route::get('features', 'FeatureController@index')->name('features');
+    Route::get('features', 'FrontendController@features')->name('features');
 
-    Route::get('feature/{id}', 'FeatureController@details')->name('feature_single');
+    Route::get('feature/{id}', 'FrontendController@feature_single')->name('feature_single');
 
-    Route::get('contact-us', 'ContactUsController@index')->name('contactUs');
+    Route::get('contact-us', 'FrontendController@contact_us')->name('contactUs');
 
-    Route::get('faqs', 'FAQController@index')->name('faq');
+    Route::get('faqs', 'FrontendController@faqs')->name('faqs');
 
-    Route::get('blogs', 'BlogsController@index')->name('blogs');
+    Route::get('blogs', 'FrontendController@blogs')->name('blogs');
 
-    Route::get('blog/{id}', 'BlogsController@details')->name('blog_single');
+    Route::get('blog/{id}', 'FrontendController@details')->name('blog_single');
+
+    Route::get('scheme', 'FrontendController@scheme')->name('scheme');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers\Backend'], function () {
@@ -69,6 +71,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'na
     ]);
 
     Route::resource('slider', 'SliderController')->only([
+        'index', 'create', 'store',  'edit', 'show'
+    ]);
+
+    Route::resource('scheme', 'SchemeController')->only([
         'index', 'create', 'store',  'edit', 'show'
     ]);
 

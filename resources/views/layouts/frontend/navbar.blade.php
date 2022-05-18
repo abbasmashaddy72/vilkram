@@ -49,13 +49,19 @@
                                 </a>
                             </li>
                             <li class="relative group">
+                                <a href="{{ route('scheme') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Scheme
+                                </a>
+                            </li>
+                            <li class="relative group">
                                 <a href="{{ route('contactUs') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
                                     Contact
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="{{ route('faq') }}"
+                                <a href="{{ route('faqs') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
                                     FAQ's
                                 </a>
