@@ -10,17 +10,21 @@
     @csrf
 
     @wire('debounce.200ms')
-    <x-form-input name="name" label="Name" type="text" />
+        <x-form-input name="name" label="Name" type="text" />
 
-    <x-form-input name="qualification" label="Qualification" type="text" />
+        <x-form-input name="qualification" label="Qualification" type="text" />
 
-    <x-form-input name="department" label="Department" type="text" />
+        <x-form-input name="department" label="Department" type="text" />
 
-    <x-form-textarea name="about" label="About" required />
+        <x-form-textarea name="about" label="About" required />
 
-    <x-form-input name="experience" label="Experience(Started At)" type="date" />
+        <x-form-input name="experience" label="Experience(Started At)" type="date" />
 
-    <x-backend.single-upload name="image" label="Image" />
+        <x-form-input name="feature_title" label="Feature Title" type="text" />
+
+        <x-form-textarea name="feature_excerpt" label="Feature Excerpt" required />
+
+        <x-backend.single-upload name="image" label="Image" />
     @endwire
 
     <div class="mt-3">

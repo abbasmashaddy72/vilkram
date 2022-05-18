@@ -9,12 +9,12 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
     <!-- Styles -->
-    <link href="{{ mix('css/frontend/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/frontend/app.css') }}" rel="stylesheet">
     @stack('styles')
     @livewireStyles
 </head>
 
-<body>
+<body class="bg-body">
 
     @include('layouts.frontend.navbar')
 
@@ -25,7 +25,7 @@
     <!-- Main Scripts -->
     @livewireScripts
 
-    <script src="{{ mix('js/frontend/app.js') }}"></script>
+    <script src="{{ asset('js/frontend/app.js') }}"></script>
     @stack('scripts')
 
     @if (getenv('APP_ENV') === 'local')

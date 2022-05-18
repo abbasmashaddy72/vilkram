@@ -17,13 +17,13 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap justify-center -mx-4">
+        <div class="flex flex-wrap justify-around -mx-4">
             @foreach ($teams as $item)
                 <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
                     <div class="mb-10 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="relative w-[170px] h-170px] rounded-full z-10 mx-auto mb-6">
+                        <div class="relative rounded-full z-10 mx-auto mb-6">
                             <img src="{{ 'storage/' . $item->image }}" alt="{{ $item->name }}"
-                                class="w-full rounded-full h-48 w-40 object-cover" />
+                                class="w-full rounded-full h-96 w-80 object-cover" />
                             <span class="absolute top-0 left-0 z-[-1]">
                                 <svg width="71" height="82" viewBox="0 0 71 82" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/backend/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/app.css') }}">
 </head>
 
 <body class="overflow-x-hidden " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
@@ -28,7 +28,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/backend/hope-ui.js') }}"></script>
-    <script src="{{ mix('js/backend/app.js') }}" defer></script>
+    <script src="{{ asset('js/backend/app.js') }}" defer></script>
 </body>
 
 </html>

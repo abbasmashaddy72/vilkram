@@ -1,19 +1,16 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        {{ "FAQ's Page" }}
+        {{ "FAQ's" }}
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
 
     <!-- ====== Faq Section Start -->
-    <section class="bg-[#f3f4ff] pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
+    <section class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
         <div class="container">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full px-4">
                     <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
-                        <span class="block mb-2 text-lg font-semibold text-primary">
-                            FAQ
-                        </span>
                         <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
                             Any Questions? Answered
                         </h2>

@@ -22,13 +22,15 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function () {
 
     Route::get('features', 'FeatureController@index')->name('features');
 
+    Route::get('feature/{id}', 'FeatureController@details')->name('feature_single');
+
     Route::get('contact-us', 'ContactUsController@index')->name('contactUs');
 
     Route::get('faqs', 'FAQController@index')->name('faq');
 
     Route::get('blogs', 'BlogsController@index')->name('blogs');
 
-    Route::get('blog-details', 'BlogsController@details')->name('blogDetails');
+    Route::get('blog/{id}', 'BlogsController@details')->name('blog_single');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers\Backend'], function () {
@@ -64,6 +66,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'na
 
     Route::resource('feature', 'FeatureController')->except([
         'store', 'update', 'destroy'
+    ]);
+
+    Route::resource('slider', 'SliderController')->only([
+        'index', 'create', 'store',  'edit', 'show'
     ]);
 
     Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], function () {

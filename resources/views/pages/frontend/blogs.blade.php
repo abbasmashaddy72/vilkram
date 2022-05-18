@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        Blog Grids
+        Blogs
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
 

@@ -1,54 +1,65 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        Features Page
+        Features
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
-
     <!-- ====== Features Section Start -->
-    <section class="pt-20 lg:pt-[120px] pb-8 lg:pb-[70px]" id="services">
-        <div class="container">
-            <div class="flex flex-wrap -mx-4">
-                <div class="w-full px-4">
-                    <div class="mb-12 lg:mb-20 max-w-[620px]">
-                        <span class="block mb-2 text-lg font-semibold text-primary">
-                            Features
-                        </span>
-                        <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
-                            Main Features Of Play
-                        </h2>
-                        <p class="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
-                            There are many variations of passages of Lorem Ipsum available but the majority have
-                            suffered alteration in some form.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-wrap -mx-4">
-                @foreach ($features as $item)
-                    <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-                        <div class="mb-12 bg-white group wow fadeInUp" data-wow-delay=".1s">
-                            <div
-                                class="w-[70px] h-[70px] flex items-center justify-center bg-primary rounded-2xl mb-8 relative z-10">
-                                <span
-                                    class="w-[70px] h-[70px] flex items-center justify-center bg-primary bg-opacity-20 rounded-2xl mb-8 absolute z-[-1] top-0 left-0 rotate-[25deg] group-hover:rotate-45 duration-300"></span>
-                                {!! $item->logo !!}
-                            </div>
-                            <h4 class="mb-3 text-xl font-bold text-dark">
-                                {{ $item->title }}
-                            </h4>
-                            <p class="mb-8 text-body-color lg:mb-11">
-                                {{ $item->excerpt }}
+    @forelse ($features as $item)
+        <section class="pt-20 pb-8" id="services">
+            <div class="container">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4">
+                        <div class="mb-12 lg:mb-20 max-w-[620px]">
+                            <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
+                                {{ $item->feature_title }}
+                            </h2>
+                            <p class="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
+                                {{ $item->feature_excerpt }}
                             </p>
-                            <a href="{{ $item->link }}"
-                                class="text-base font-medium text-body-color hover:text-primary">
-                                Learn More
-                            </a>
                         </div>
                     </div>
-                @endforeach
+                </div>
+                <div class="flex flex-wrap -mx-4">
+                    @forelse ($item->features as $data)
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex flex-col">
+                            <div class="mb-10 group wow fadeInUp border-gray-200 border-2 p-4 rounded-lg shadow-testimonial flex-1 bg-white"
+                                data-wow-delay=".1s">
+                                <div class="rounded overflow-hidden mb-8">
+                                    <a href="{{ route('feature_single', ['id' => $data->id]) }}"
+                                        class="block">
+                                        <img src="{{ asset('storage/' . $data->image) }}" alt="{{ $data->title }}"
+                                            class="w-full transition group-hover:scale-125 group-hover:rotate-6 h-56 object-cover" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="flex justify-end">
+                                        <span
+                                            class="bg-primary rounded inline-block text-center py-1 px-4 text-xs leading-loose font-semibold text-white mb-5">
+                                            {{ $item->name }}
+                                        </span>
+                                    </div>
+                                    <h3>
+                                        <a href="{{ route('feature_single', ['id' => $data->id]) }}"
+                                            class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl mb-4 inline-block text-dark hover:text-primary">
+                                            {{ $data->title }}
+                                        </a>
+                                    </h3>
+                                    <p class="text-base text-body-color">
+                                        {{ $data->excerpt }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="w-full px-4">
+                            <div class="text-center font-bold text-gray-800 text-lg">No Data Available</div>
+                        </div>
+                    @endforelse
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endforeach
+
     <!-- ====== Features Section End -->
 </x-guest-layout>

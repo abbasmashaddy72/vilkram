@@ -13,6 +13,7 @@ class Blog extends Model implements HasMedia
     use HasFactory, InteractsWithMedia;
 
     protected $fillable = [
+        'team_id',
         'title',
         'image',
         'tags',
@@ -25,5 +26,10 @@ class Blog extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')
             ->width(600);
+    }
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
     }
 }

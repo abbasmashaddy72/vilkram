@@ -10,13 +10,15 @@
     @csrf
 
     @wire('debounce.200ms')
-    <x-form-textarea name="logo" label="Logo" type="text" />
+        <x-form-select name="team_id" label="Team Name" :options="Helper::getKeyValues('Team', 'name', 'id')" placeholder="Please Select" />
 
-    <x-form-input name="title" label="Title" type="text" />
+        <x-backend.single-upload name="image" label="Image" />
 
-    <x-form-textarea name="excerpt" label="Excerpt" required />
+        <x-form-input name="title" label="Title" type="text" />
 
-    <x-form-input name="link" label="Link(If NA copy & paste javascript:void(0))" type="text" />
+        <x-form-textarea name="excerpt" label="Excerpt" required />
+
+        <x-backend.ckeditor id="bodyen" lang="EN" name="description" label="Description" required />
     @endwire
 
     <div class="mt-3">

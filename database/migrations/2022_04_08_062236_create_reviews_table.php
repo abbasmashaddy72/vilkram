@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('team_id')->constrained('teams')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
-            $table->string('extra')->nullable();
             $table->text('image')->nullable();
             $table->longText('message')->nullable();
             $table->integer('stars')->nullable();

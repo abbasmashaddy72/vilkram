@@ -33,10 +33,10 @@ class ReviewTable extends LivewireDatatable
                 ->filterable()
                 ->label('Name'),
 
-            Column::name('extra')
+            Column::name('team.name')
                 ->searchable()
                 ->filterable()
-                ->label('Extra'),
+                ->label('Team Name'),
 
             Column::name('message')
                 ->searchable()

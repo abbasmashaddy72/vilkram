@@ -12,7 +12,7 @@ class TeamCEV extends Component
     use WithFileUploads;
 
     // Model Values
-    public $name, $image, $qualification, $department, $about, $experience;
+    public $name, $image, $qualification, $department, $about, $experience, $feature_title, $feature_excerpt;
 
     // Custom Values
     public $action, $isUploaded = false, $team;
@@ -24,6 +24,8 @@ class TeamCEV extends Component
         'department' => '',
         'about' => '',
         'experience' => '',
+        'feature_title' => '',
+        'feature_excerpt' => '',
     ];
 
     public function updated($propertyName)
@@ -75,6 +77,8 @@ class TeamCEV extends Component
             $this->department = $data->department;
             $this->about = $data->about;
             $this->experience = $data->experience;
+            $this->feature_title = $data->feature_title;
+            $this->feature_excerpt = $data->feature_excerpt;
         }
         $this->action = substr(strstr(Route::currentRouteAction(), '@'), 1);
     }

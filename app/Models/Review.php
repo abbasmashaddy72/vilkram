@@ -10,10 +10,15 @@ class Review extends Model
     use HasFactory;
 
     protected $fillable = [
+        'team_id',
         'name',
-        'extra',
         'image',
         'message',
         'stars',
     ];
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

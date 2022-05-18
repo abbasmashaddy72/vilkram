@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Form\Backend;
 
 use App\Models\Blog;
+use App\Models\Team;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -12,17 +13,18 @@ class BlogCEV extends Component
     use WithFileUploads;
 
     // Model Values
-    public $title, $image, $tags, $excerpt, $description;
+    public $team_id, $title, $image, $tags, $excerpt, $description;
 
     // Custom Values
     public $action, $isUploaded = false, $blog;
 
     protected $rules = [
+        'team_id' => '',
         'title' => '',
         'image' => '',
         'tags' => '',
         'excerpt' => '',
-        'description' => '',
+        'description' => ''
     ];
 
     public function updated($propertyName)
@@ -41,6 +43,7 @@ class BlogCEV extends Component
         if (gettype($this->image) != 'string') {
             $validatedData['image'] = $this->image->store('blog_images');
         }
+        $team = Team::findOrFail($this->team_id);
 
         Blog::create($validatedData);
 
@@ -56,6 +59,7 @@ class BlogCEV extends Component
         if (gettype($this->image) != 'string') {
             $validatedData['image'] = $this->image->store('blog_images');
         }
+        $team = Team::findOrFail($this->team_id);
 
         Blog::where('id', $this->blog)->update($validatedData);
 
@@ -68,6 +72,7 @@ class BlogCEV extends Component
     {
         if (substr(strstr(Route::currentRouteAction(), '@'), 1) != 'create') {
             $data = Blog::findOrFail($blog);
+            $this->team_id = $data->team_id;
             $this->title = $data->title;
             $this->image = $data->image;
             $this->tags = $data->tags;

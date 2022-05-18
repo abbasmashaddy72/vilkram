@@ -1,5 +1,5 @@
 <!-- ====== Footer Section Start -->
-<footer class="bg-black pt-20 lg:pt-[120px] relative z-10 wow fadeInUp" data-wow-delay=".15s">
+<footer class="bg-primary pt-20 lg:pt-[120px] relative z-10 wow fadeInUp" data-wow-delay=".15s">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
@@ -49,25 +49,49 @@
                     <ul>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Home
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Features
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 About
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Testimonial
                             </a>
                         </li>
@@ -80,30 +104,69 @@
                     <ul>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 How it works
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Privacy policy
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Terms of Service
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
+                                class="
+                      inline-block
+                      text-base text-[#f3f4fe]
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                    ">
                                 Refund policy
                             </a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+                @if (!Jenssegers\Agent\Facades\Agent::isMobile() || Jenssegers\Agent\Facades\Agent::isTablet())
+                    <div>
+                        <iframe src="{{ $embed_map_link }}" width="600" height="360" style="border:0;"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                @else
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="{{ $embed_map_link }}" width="600" height="200" style="border:0;"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

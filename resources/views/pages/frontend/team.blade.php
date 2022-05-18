@@ -1,18 +1,18 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        Team Page
+        Team
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
 
     <!-- ====== About Section Start -->
     @foreach ($teams as $item)
-        <section class="pt-20 lg:pt-[120px] pb-20 lg:pb-[60px] bg-[#f3f4fe]">
+        <section class="pt-20 pb-20">
             <div class="container">
                 <div class="bg-white wow fadeInUp" data-wow-delay=".2s">
                     <div class="flex flex-wrap -mx-4">
                         <div class="w-full px-4">
-                            <div class="lg:flex items-center justify-between border overflow-hidden">
+                            <div class="lg:flex items-center justify-between border overflow-hidden shadow-testimonial">
                                 @if ($loop->iteration % 2 == 0)
                                     <div
                                         class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
@@ -35,7 +35,7 @@
                                         </p>
                                     </div>
                                     <div class="text-center">
-                                        <div class="relative inline-block z-10 ml-8">
+                                        <div class="relative inline-block z-10 mr-8">
                                             <img src="{{ asset('storage/' . $item->image) }}" alt="image"
                                                 class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
                                         </div>

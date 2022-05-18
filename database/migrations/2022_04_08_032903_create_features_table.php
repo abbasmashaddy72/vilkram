@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->longText('logo')->nullable();
+            $table->foreignId('team_id')->constrained('teams')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('image')->nullable();
             $table->string('title');
             $table->text('excerpt')->nullable();
+            $table->text('description')->nullable();
             $table->string('link')->default('#');
             $table->timestamps();
         });

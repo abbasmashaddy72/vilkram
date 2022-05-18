@@ -12,7 +12,7 @@ class Blogs extends Component
 
     public function render()
     {
-        $blogs = Blog::paginate(9);
+        $blogs = Blog::with('team')->paginate(9);
 
         return view('livewire.components.frontend.blogs', compact([
             'blogs'

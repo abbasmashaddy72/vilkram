@@ -10,9 +10,15 @@ class Feature extends Model
     use HasFactory;
 
     protected $fillable = [
-        'logo',
+        'team_id',
+        'image',
         'title',
         'excerpt',
         'link'
     ];
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

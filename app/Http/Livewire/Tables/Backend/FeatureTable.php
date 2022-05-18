@@ -29,9 +29,6 @@ class FeatureTable extends LivewireDatatable
                 ->defaultSort('desc')
                 ->filterable(),
 
-            Column::name('logo')
-                ->label('Logo'),
-
             Column::name('title')
                 ->searchable()
                 ->filterable()

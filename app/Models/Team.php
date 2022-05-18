@@ -16,9 +16,16 @@ class Team extends Model
         'department',
         'about',
         'experience',
+        'feature_title',
+        'feature_excerpt'
     ];
 
     protected $casts = [
         'experience' => 'date:Y-m-d',
     ];
+
+    public function features()
+    {
+        return $this->hasMany(Feature::class);
+    }
 }

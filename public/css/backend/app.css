@@ -1583,6 +1583,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4{
   height: 1rem;
 }
+.h-auto{
+  height: auto;
+}
 .h-12{
   height: 3rem;
 }
@@ -1628,6 +1631,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-4{
   width: 1rem;
 }
+.w-96{
+  width: 24rem;
+}
 .w-12{
   width: 3rem;
 }
@@ -1648,9 +1654,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-9{
   width: 2.25rem;
-}
-.w-96{
-  width: 24rem;
 }
 .w-5{
   width: 1.25rem;
