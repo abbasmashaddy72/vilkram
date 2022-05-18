@@ -4,7 +4,7 @@
         <div class="relative flex items-center justify-between -mx-4">
             <div class="max-w-full px-4 w-60">
                 <a href="{{ route('welcome') }}" class="block w-full py-5 navbar-logo">
-                    <img src="assets/images/logo/logo-white.svg" alt="logo" class="w-full header-logo" />
+                    <img src="{{ asset('storage/' . $logo) }}" alt="logo" class="w-full header-logo" />
                 </a>
             </div>
             <div class="flex items-center justify-end w-full px-4">

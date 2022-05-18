@@ -6,7 +6,7 @@
     <!-- ====== Banner Section End -->
 
     <!-- ====== About Section Start -->
-    @foreach ($about_s as $item)
+    @foreach ($about_us as $item)
         <section class="pt-20 lg:pt-[120px] pb-20 lg:pb-[60px]">
             <div class="container">
                 <div class="bg-white wow fadeInUp" data-wow-delay=".2s">
