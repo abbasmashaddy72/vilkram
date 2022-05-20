@@ -1,5 +1,5 @@
 <x-backend.custom-form back='true'>
-    <x-slot name="title">{{ __('Team') }}</x-slot>
+    <x-slot name="title">{{ __('Doctor') }}</x-slot>
     @if ($action == 'create')
         <form wire:submit.prevent="store">
         @elseif($action == 'edit')

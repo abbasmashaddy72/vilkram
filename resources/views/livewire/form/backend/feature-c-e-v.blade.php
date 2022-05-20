@@ -10,7 +10,7 @@
     @csrf
 
     @wire('debounce.200ms')
-        <x-form-select name="team_id" label="Team Name" :options="Helper::getKeyValues('Team', 'name', 'id')" placeholder="Please Select" />
+        <x-form-select name="team_id" label="Doctor Name" :options="Helper::getKeyValues('Team', 'name', 'id')" placeholder="Please Select" />
 
         <x-backend.single-upload name="image" label="Image" />
 

@@ -2,7 +2,7 @@
 <div class="sticky top-0 left-0 z-40 flex items-center w-full bg-primary  ud-header">
     <div class="container">
         <div class="relative flex items-center justify-between -mx-4">
-            <div class="max-w-full px-4 w-60">
+            <div class="max-w-full px-4 w-32">
                 <a href="{{ route('welcome') }}" class="block w-full py-5 navbar-logo">
                     <img src="{{ asset('storage/' . $logo) }}" alt="logo" class="w-full header-logo" />
                 </a>
@@ -25,15 +25,27 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="{{ route('aboutUs') }}"
+                                <a href="{{ route('features') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    About
+                                    Services
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="{{ route('features') }}"
+                                <a href="{{ route('teams') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Features
+                                    Doctors
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('scheme') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Insurances
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('book_appointment') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    Book Appointment
                                 </a>
                             </li>
                             <li class="relative group">
@@ -43,21 +55,15 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="{{ route('teams') }}"
-                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Teams
-                                </a>
-                            </li>
-                            <li class="relative group">
-                                <a href="{{ route('scheme') }}"
-                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Scheme
-                                </a>
-                            </li>
-                            <li class="relative group">
                                 <a href="{{ route('contactUs') }}"
                                     class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
-                                    Contact
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="relative group">
+                                <a href="{{ route('aboutUs') }}"
+                                    class="flex py-2 mx-8 text-base text-dark lg:text-white lg:group-hover:opacity-70 lg:group-hover:text-white group-hover:text-primary lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:ml-7 xl:ml-12">
+                                    About Us
                                 </a>
                             </li>
                             <li class="relative group">

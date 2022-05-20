@@ -12,8 +12,8 @@ class HomePageCEV extends Component
 
     public $logo;
     public $about;
-    public $services_excerpt;
-    public $count_excerpt;
+    public $features_excerpt;
+    public $faq_excerpt;
     public $review_excerpt;
     public $team_excerpt;
     public $counts;
@@ -38,8 +38,8 @@ class HomePageCEV extends Component
     {
         $this->logo = Helper::get_static_option('logo');
         $this->about = Helper::get_static_option('about');
-        $this->services_excerpt = Helper::get_static_option('services_excerpt');
-        $this->count_excerpt = Helper::get_static_option('count_excerpt');
+        $this->features_excerpt = Helper::get_static_option('features_excerpt');
+        $this->faq_excerpt = Helper::get_static_option('faq_excerpt');
         $this->review_excerpt = Helper::get_static_option('review_excerpt');
         $this->team_excerpt = Helper::get_static_option('team_excerpt');
         $this->twitter = Helper::get_static_option('twitter');
@@ -59,8 +59,8 @@ class HomePageCEV extends Component
     protected $rules = [
         'logo' => '',
         'about' => '',
-        'services_excerpt' => '',
-        'count_excerpt' => '',
+        'features_excerpt' => '',
+        'faq_excerpt' => '',
         'review_excerpt' => '',
         'team_excerpt' => '',
         'twitter' => '',

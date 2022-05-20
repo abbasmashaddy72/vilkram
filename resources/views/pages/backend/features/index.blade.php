@@ -2,7 +2,7 @@
     <x-backend.card>
 
         <x-slot name="title">
-            {{ __('Features') }}
+            {{ __('Services') }}
         </x-slot>
 
         <x-slot name="addbutton">

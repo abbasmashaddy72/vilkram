@@ -39,6 +39,11 @@ class FrontendController extends Controller
         $reviews = Review::with('team')->get()->take(3);
         $gr_api = Helper::get_static_option('gr_api');
         $gr_count_api = Helper::get_static_option('gr_count_api');
+        $features_excerpt = Helper::get_static_option('features_excerpt');
+        $faq_excerpt = Helper::get_static_option('faq_excerpt');
+        $review_excerpt = Helper::get_static_option('review_excerpt');
+        $team_excerpt = Helper::get_static_option('team_excerpt');
+        $teams = Team::get();
 
         return view('pages.frontend.home_page', compact([
             'slider_images',
@@ -47,7 +52,12 @@ class FrontendController extends Controller
             'faqs',
             'reviews',
             'gr_api',
-            'gr_count_api'
+            'gr_count_api',
+            'features_excerpt',
+            'faq_excerpt',
+            'review_excerpt',
+            'team_excerpt',
+            'teams'
         ]));
     }
 
@@ -94,9 +104,11 @@ class FrontendController extends Controller
     public function faqs()
     {
         $faqs = Faq::get();
+        $faq_excerpt = Helper::get_static_option('faq_excerpt');
 
         return view('pages.frontend.faq', compact([
-            'faqs'
+            'faqs',
+            'faq_excerpt'
         ]));
     }
 
@@ -119,5 +131,17 @@ class FrontendController extends Controller
         $data = Scheme::get();
 
         return view('pages.frontend.schemes', compact('data'));
+    }
+
+    public function book_appointment($tem_id = null)
+    {
+        /**
+         * @get('/book_appointment')
+         * @name('book_appointment')
+         * @middlewares('web')
+         */
+        $team_id = $tem_id;
+
+        return view('pages.frontend.book_appointment', compact('team_id'));
     }
 }

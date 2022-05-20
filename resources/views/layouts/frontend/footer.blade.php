@@ -7,10 +7,22 @@
                     <a href="{{ route('welcome') }}" class="inline-block max-w-[160px] mb-6">
                         <img src="{{ asset('storage/' . $logo) }}" alt="logo" class="max-w-full" />
                     </a>
-                    <p class="text-base text-[#f3f4fe] mb-7">
-                        {{ $address }}
-                    </p>
-                    <div class="flex items-center -mx-3">
+                    <div class="flex justify-start max-w-xs text-gray-50">
+                        <p>{{ $address }}</p>
+                    </div>
+                    <div class="flex justify-start max-w-xs mt-3">
+                        <a href="mail:{{ $email }}">
+                            <p class="text-base text-gray-100">{{ $email }}</p>
+                        </a>
+                    </div>
+                    @foreach ($contact_no as $item)
+                        <div class="flex justify-start max-w-xs mt-3">
+                            <a href="tel:{{ $item }}">
+                                <p class="text-base text-gray-100">{{ $item }}</p>
+                            </a>
+                        </div>
+                    @endforeach
+                    <div class="flex items-center -mx-3 mt-3">
                         <a href="{{ $facebook }}" class="px-3 text-[#dddddd] hover:text-white">
                             <svg width="10" height="18" viewBox="0 0 10 18" class="fill-current">
                                 <path

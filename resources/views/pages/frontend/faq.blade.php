@@ -15,8 +15,7 @@
                             Any Questions? Answered
                         </h2>
                         <p class="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
-                            There are many variations of passages of Lorem Ipsum available but the majority have
-                            suffered alteration in some form.
+                            {{ $faq_excerpt }}
                         </p>
                     </div>
                 </div>

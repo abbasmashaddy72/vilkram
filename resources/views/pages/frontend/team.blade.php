@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        Team
+        Doctors
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
 
@@ -33,6 +33,11 @@
                                         <p class="text-xl text-body-color mb-9 leading-relaxed">
                                             <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
                                         </p>
+                                        <div class="flex justify-end">
+                                            <a href="{{ route('book_appointment', ['team_id' => $item->id]) }}"
+                                                class="px-3 py-2 bg-primary font-semibold text-white text-lg rounded-xl hover:bg-secondary transition ease-in-out duration-500">Book
+                                                Appointment</a>
+                                        </div>
                                     </div>
                                     <div class="text-center">
                                         <div class="relative inline-block z-10 mr-8">
@@ -66,6 +71,11 @@
                                         <p class="text-xl text-body-color mb-9 leading-relaxed">
                                             <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
                                         </p>
+                                        <div class="flex justify-end">
+                                            <a href="{{ route('book_appointment', ['team_id' => $item->id]) }}"
+                                                class="px-3 py-2 bg-primary font-semibold text-white text-lg rounded-xl hover:bg-secondary transition ease-in-out duration-500">Book
+                                                Appointment</a>
+                                        </div>
                                     </div>
                                 @endif
                             </div>

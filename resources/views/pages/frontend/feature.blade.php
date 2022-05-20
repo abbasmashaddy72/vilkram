@@ -33,12 +33,6 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <div class="flex justify-end">
-                                        <span
-                                            class="bg-primary rounded inline-block text-center py-1 px-4 text-xs leading-loose font-semibold text-white mb-5">
-                                            {{ $item->name }}
-                                        </span>
-                                    </div>
                                     <h3>
                                         <a href="{{ route('feature_single', ['id' => $data->id]) }}"
                                             class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl mb-4 inline-block text-dark hover:text-primary">

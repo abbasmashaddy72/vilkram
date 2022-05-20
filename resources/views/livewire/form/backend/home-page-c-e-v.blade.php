@@ -45,13 +45,13 @@
                 {{ __('Descriptions') }}
             </h4>
 
-            <x-form-textarea name="features_excerpt" label="Features Excerpt" type="text" />
+            <x-form-textarea name="features_excerpt" label="Service Excerpt" type="text" />
 
             <x-form-textarea name="faq_excerpt" label="FAQ Excerpt" type="text" />
 
-            <x-form-textarea name="testimonials_excerpt" label="Testimonials Excerpt" type="text" />
+            <x-form-textarea name="review_excerpt" label="Review Excerpt" type="text" />
 
-            <x-form-textarea name="team_excerpt" label="Team Excerpt" type="text" />
+            <x-form-textarea name="team_excerpt" label="Doctor Excerpt" type="text" />
 
             <h4 class="my-4 text-2xl font-medium card-title" wire:ignore>
                 {{ __('Social Media Links') }}

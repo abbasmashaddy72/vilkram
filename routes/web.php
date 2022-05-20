@@ -30,15 +30,19 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function () {
 
     Route::get('blogs', 'FrontendController@blogs')->name('blogs');
 
-    Route::get('blog/{id}', 'FrontendController@details')->name('blog_single');
+    Route::get('blog/{id}', 'FrontendController@blog_single')->name('blog_single');
 
     Route::get('scheme', 'FrontendController@scheme')->name('scheme');
+
+    Route::get('book_appointment/{team_id?}', 'FrontendController@book_appointment')->name('book_appointment');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers\Backend'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
     Route::get('homepage', 'HomePageController@index')->name('homepage');
+
+    Route::get('book-appointment', 'BookAppointmentController@index')->name('book.appointment');
 
     Route::resource('contact-us', 'ContactUsController')->except([
         'store', 'update', 'destroy'
