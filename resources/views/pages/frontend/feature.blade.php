@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
-        Features
+        Services
     </x-frontend.banner>
     <!-- ====== Banner Section End -->
     <!-- ====== Features Section Start -->
@@ -39,9 +39,6 @@
                                             {{ $data->title }}
                                         </a>
                                     </h3>
-                                    <p class="text-base text-body-color">
-                                        {{ $data->excerpt }}
-                                    </p>
                                 </div>
                             </div>
                         </div>

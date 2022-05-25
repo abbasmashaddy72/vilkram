@@ -12,72 +12,38 @@
                 <div class="bg-white wow fadeInUp" data-wow-delay=".2s">
                     <div class="flex flex-wrap -mx-4">
                         <div class="w-full px-4">
-                            <div class="lg:flex items-center justify-between border overflow-hidden shadow-testimonial">
-                                @if ($loop->iteration % 2 == 0)
-                                    <div
-                                        class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
-                                        <h2
-                                            class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
-                                            {{ $item->name }}
-                                        </h2>
-                                        <p class="text-xl text-body-color mb-9 leading-relaxed">
-                                            <span class="font-bold text-dark">Experience:</span>
-                                            {{ $item->experience->diffInYears(now()) }} Years
-                                            <br>
-                                            <span class="font-bold text-dark">Qualification:</span>
-                                            {{ $item->qualification }}
-                                            <br>
-                                            <span class="font-bold text-dark">Department:</span>
-                                            {{ $item->department }}
-                                        </p>
-                                        <p class="text-xl text-body-color mb-9 leading-relaxed">
-                                            <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
-                                        </p>
-                                        <div class="flex justify-end">
+                            <div class="lg:flex items-center justify-around border overflow-hidden shadow-testimonial">
+                                <div class="text-center">
+                                    <div class="relative inline-block z-10">
+                                        <img src="{{ asset('storage/' . $item->image) }}" alt="image"
+                                            class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
+                                        <div class="mt-8">
                                             <a href="{{ route('book_appointment', ['team_id' => $item->id]) }}"
                                                 class="px-3 py-2 bg-primary font-semibold text-white text-lg rounded-xl hover:bg-secondary transition ease-in-out duration-500">Book
                                                 Appointment</a>
                                         </div>
                                     </div>
-                                    <div class="text-center">
-                                        <div class="relative inline-block z-10 mr-8">
-                                            <img src="{{ asset('storage/' . $item->image) }}" alt="image"
-                                                class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
-                                        </div>
-                                    </div>
-                                @else
-                                    <div class="text-center">
-                                        <div class="relative inline-block z-10 ml-8">
-                                            <img src="{{ asset('storage/' . $item->image) }}" alt="image"
-                                                class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
-                                        <h2
-                                            class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
-                                            {{ $item->name }}
-                                        </h2>
-                                        <p class="text-xl text-body-color mb-9 leading-relaxed">
-                                            <span class="font-bold text-dark">Experience:</span>
-                                            {{ $item->experience->diffInYears(now()) }} Years
-                                            <br>
-                                            <span class="font-bold text-dark">Qualification:</span>
-                                            {{ $item->qualification }}
-                                            <br>
-                                            <span class="font-bold text-dark">Department:</span>
-                                            {{ $item->department }}
-                                        </p>
-                                        <p class="text-xl text-body-color mb-9 leading-relaxed">
-                                            <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
-                                        </p>
-                                        <div class="flex justify-end">
-                                            <a href="{{ route('book_appointment', ['team_id' => $item->id]) }}"
-                                                class="px-3 py-2 bg-primary font-semibold text-white text-lg rounded-xl hover:bg-secondary transition ease-in-out duration-500">Book
-                                                Appointment</a>
-                                        </div>
-                                    </div>
-                                @endif
+                                </div>
+                                <div
+                                    class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
+                                    <h2
+                                        class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
+                                        {{ $item->name }}
+                                    </h2>
+                                    <p class="text-xl text-body-color mb-9 leading-relaxed">
+                                        <span class="font-bold text-dark">Experience:</span>
+                                        {{ $item->experience->diffInYears(now()) }} Years
+                                        <br>
+                                        <span class="font-bold text-dark">Qualification:</span>
+                                        {{ $item->qualification }}
+                                        <br>
+                                        <span class="font-bold text-dark">Department:</span>
+                                        {{ $item->department }}
+                                    </p>
+                                    <p class="text-xl text-body-color mb-9 leading-relaxed text-justify">
+                                        <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

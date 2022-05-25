@@ -5,7 +5,7 @@
             <div class="flex justify-center">
                 <div class="mb-3 xl:w-96">
                     <select wire:model='team_id'
-                        class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-[#96bcff] rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         aria-label="Default select example">
                         <option selected>Select Doctor</option>
                         @foreach ($team as $key => $item)
@@ -22,7 +22,7 @@
             <label class="block text-sm text-dark">Patient Name
                 <span class="text-red-600 ml-2">*</span>
                 <input type="text"
-                    class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                    class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                     placeholder="Enter Patient name" required wire:model="name" />
             </label>
             @error('name')
@@ -33,7 +33,7 @@
             <label class="block text-sm text-dark">Patient Age
                 <span class="text-red-600 ml-2">*</span>
                 <input type="number"
-                    class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                    class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                     placeholder="Enter Patient Age in Years" required wire:model="age" />
             </label>
             @error('age')
@@ -43,7 +43,7 @@
         <div class="mb-6">
             <label class="block text-sm text-dark">Patient Address
                 <span class="text-red-600 ml-2">*</span>
-                <textarea class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                <textarea class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                     placeholder="Enter Patient Address" required wire:model="address"></textarea>
             </label>
             @error('age')
@@ -54,7 +54,7 @@
             <label class="block text-sm text-dark">Phone Number
                 <span class="text-red-600 ml-2">*</span>
                 <input type="tel"
-                    class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                    class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                     placeholder="Enter your phone number" required wire:model="phone" />
             </label>
             @error('phone')
@@ -64,8 +64,8 @@
         <div class="mb-6">
             <label class="block text-sm text-dark">Email
                 <input type="email"
-                    class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
-                    placeholder="Enter Email" required wire:model="email" />
+                    class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
+                    placeholder="Enter Email" wire:model="email" />
             </label>
             @error('email')
                 <span class="text-danger">{{ $message }}</span>
@@ -116,7 +116,7 @@
                 <div class="w-full px-3">
                     <label class="block text-sm text-dark">If Yes, state on which condition and when?<span
                             class="text-red-600 ml-2">*</span>
-                        <textarea type="text" class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                        <textarea type="text" class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                             placeholder="Enter your Address" required
                             wire:model="previous_record_description"></textarea>
                     </label>
@@ -131,7 +131,7 @@
                 <label class="block text-sm text-dark">Appointment Date
                     <span class="text-red-600 ml-2">*</span>
                     <input type="date"
-                        class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                        class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                         placeholder="Enter your Age" required wire:model="appointment_date" />
                 </label>
                 @error('appointment_date')
@@ -142,7 +142,7 @@
                 <label class="block text-sm text-dark">Appointment Time
                     <span class="text-red-600 ml-2">*</span>
                     <input type="time"
-                        class="w-full border-0 border-b border-[#f1f1f1] focus:border-primary focus:outline-none py-4"
+                        class="w-full border-0 border-b border-[#96bcff] focus:border-primary focus:outline-none py-4"
                         placeholder="Enter your phone number" required wire:model="appointment_time" />
                 </label>
                 @error('appointment_time')

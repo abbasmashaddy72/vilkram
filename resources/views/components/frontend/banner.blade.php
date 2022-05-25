@@ -1,4 +1,4 @@
-<div class="relative z-10 pt-[120px] md:pt-[60px] lg:pt-[60px] pb-[100px] bg-primary overflow-hidden">
+<div class="relative z-10 pt-[6px] md:pt-[60px] lg:pt-[20px] pb-[30px] bg-primary overflow-hidden">
     <div class="container">
         <div class="flex flex-wrap items-center -mx-4">
             <div class="w-full px-4">

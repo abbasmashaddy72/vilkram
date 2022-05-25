@@ -91,58 +91,39 @@
                     <h4 class="text-lg font-semibold text-white mb-9">About Us</h4>
                     <ul>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Home
+                            <a href="{{ route('features') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Services
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Features
+                            <a href="{{ route('teams') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Doctors
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                About
+                            <a href="{{ route('scheme') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Insurance
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Testimonial
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
-                <div class="w-full mb-10">
-                    <h4 class="text-lg font-semibold text-white mb-9">Features</h4>
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                How it works
+                            <a href="{{ route('book_appointment') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Book Appointment
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Privacy policy
+                            <a href="{{ route('blogs') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Blogs
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Terms of Service
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)"
-                                class="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2">
-                                Refund policy
+                            <a href="{{ route('contactUs') }}"
+                                class="inline-block text-base text-[#f3f4fe] hover:opacity-70 leading-loose mb-2">
+                                Contact Us
                             </a>
                         </li>
                     </ul>
@@ -151,7 +132,7 @@
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
                 @if (!Jenssegers\Agent\Facades\Agent::isMobile() || Jenssegers\Agent\Facades\Agent::isTablet())
                     <div>
-                        <iframe src="{{ $embed_map_link }}" width="600" height="360" style="border:0;"
+                        <iframe src="{{ $embed_map_link }}" width="800" height="360" style="border:0;"
                             allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
@@ -172,13 +153,13 @@
                 <div class="w-full px-4 md:w-2/3 lg:w-1/2">
                     <div class="my-1">
                         <div class="flex items-center justify-center -mx-3  md:justify-start">
-                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:text-primary px-3">
+                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:opacity-70 px-3">
                                 Privacy policy
                             </a>
-                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:text-primary px-3">
+                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:opacity-70 px-3">
                                 Legal notice
                             </a>
-                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:text-primary px-3">
+                            <a href="javascript:void(0)" class="text-base text-[#f3f4fe] hover:opacity-70 px-3">
                                 Terms of service
                             </a>
                         </div>

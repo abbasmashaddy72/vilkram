@@ -84,42 +84,6 @@
     </section>
     <!-- ====== Features Section End -->
 
-    <!-- ====== About Section Start -->
-    @if (!empty($about_us))
-        <section id="about" class="pt-20 lg:pt-[120px] pb-20 lg:pb-[120px]">
-            <div class="container">
-                <div class="bg-white wow fadeInUp shadow-testimonial" data-wow-delay=".2s">
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full px-4">
-                            <div class="items-center justify-between overflow-hidden border lg:flex">
-                                <div
-                                    class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
-                                    <span class="inline-block px-5 py-2 mb-5 text-sm font-medium text-white bg-primary">
-                                        About Us
-                                    </span>
-                                    <h2
-                                        class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
-                                        {{ $about_us->title }}
-                                    </h2>
-                                    <p class="text-base leading-relaxed text-body-color mb-9 text-justify">
-                                        {{ $about_us->excerpt }}
-                                    </p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="relative z-10 inline-block">
-                                        <img src="{{ asset('storage/' . $about_us->image) }}" alt="image"
-                                            class="mx-auto lg:ml-auto" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    @endif
-    <!-- ====== About Section End -->
-
     <!-- ====== Faq Section Start -->
     <section class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
         <div class="container">

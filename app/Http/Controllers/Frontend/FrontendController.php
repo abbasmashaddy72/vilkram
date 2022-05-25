@@ -34,7 +34,6 @@ class FrontendController extends Controller
     {
         $slider_images = Slider::where('on', 'homepage')->get();
         $features = Feature::with('team')->get()->take(3);
-        $about_us = About::get()->first();
         $faqs = Faq::get()->take(6);
         $reviews = Review::with('team')->get()->take(3);
         $gr_api = Helper::get_static_option('gr_api');
@@ -48,7 +47,6 @@ class FrontendController extends Controller
         return view('pages.frontend.home_page', compact([
             'slider_images',
             'features',
-            'about_us',
             'faqs',
             'reviews',
             'gr_api',
@@ -93,7 +91,7 @@ class FrontendController extends Controller
         $data = Feature::findOrFail($id);
         $related = Feature::where('team_id', $data->team_id)->with('team')->limit(3)->get();
 
-        return view('pages.frontend.blog-details', compact('data', 'related'));
+        return view('pages.frontend.feature_single', compact('data', 'related'));
     }
 
     public function contact_us()
