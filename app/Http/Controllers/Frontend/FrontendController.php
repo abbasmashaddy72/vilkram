@@ -89,7 +89,7 @@ class FrontendController extends Controller
     public function feature_single($id)
     {
         $data = Feature::findOrFail($id);
-        $related = Feature::where('team_id', $data->team_id)->with('team')->limit(3)->get();
+        $related = Feature::where('team_id', $data->team_id)->with('team')->whereNotIn('id', [$id])->get();
 
         return view('pages.frontend.feature_single', compact('data', 'related'));
     }

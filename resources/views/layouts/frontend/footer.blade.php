@@ -1,5 +1,6 @@
 <!-- ====== Footer Section Start -->
-<footer class="bg-primary pt-20 lg:pt-[120px] relative z-10 wow fadeInUp" data-wow-delay=".15s">
+<footer class="bg-gradient-to-r from-primary to-secondary pt-20 lg:pt-[120px] relative z-10 wow fadeInUp"
+    data-wow-delay=".15s">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
@@ -342,7 +343,7 @@
 
 <!-- ====== Back To Top Start -->
 <a href="javascript:void(0)"
-    class="hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:bg-dark back-to-top shadow-md transition duration-300 ease-in-out">
+    class="hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:bg-secondary back-to-top shadow-md transition duration-300 ease-in-out">
     <span class="w-3 h-3 border-t border-l border-white rotate-45 mt-[6px]"></span>
 </a>
 <!-- ====== Back To Top End -->
