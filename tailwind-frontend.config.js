@@ -39,7 +39,7 @@ module.exports = {
                 primary: '#3056D3',
                 secondary: '#13C296',
                 'body-color': '#637381',
-                body: '#e5ffff',
+                body: '#f2ffff',
                 warning: '#FBBF24'
             },
             boxShadow: {
