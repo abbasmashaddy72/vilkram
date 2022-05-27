@@ -12,14 +12,13 @@ class FeatureCEV extends Component
     use WithFileUploads;
 
     // Model Values
-    public $team_id, $image, $title, $excerpt, $description;
+    public $team_id, $title, $excerpt, $description;
 
     // Custom Values
     public $action, $isUploaded = false, $feature;
 
     protected $rules = [
         'team_id' => '',
-        'image' => '',
         'title' => '',
         'excerpt' => '',
         'description' => '',
@@ -28,19 +27,11 @@ class FeatureCEV extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
-
-        if (gettype($this->image) != 'string') {
-            $this->isUploaded = true;
-        }
     }
 
     public function store()
     {
         $validatedData = $this->validate();
-
-        if (gettype($this->image) != 'string') {
-            $validatedData['image'] = $this->image->store('feature_images');
-        }
 
         Feature::create($validatedData);
 
@@ -52,10 +43,6 @@ class FeatureCEV extends Component
     public function update()
     {
         $validatedData = $this->validate();
-
-        if (gettype($this->image) != 'string') {
-            $validatedData['image'] = $this->image->store('feature_images');
-        }
 
         Feature::where('id', $this->feature)->update($validatedData);
 
@@ -69,7 +56,6 @@ class FeatureCEV extends Component
         if (substr(strstr(Route::currentRouteAction(), '@'), 1) != 'create') {
             $data = Feature::findOrFail($feature);
             $this->team_id = $data->team_id;
-            $this->image = $data->image;
             $this->title = $data->title;
             $this->excerpt = $data->excerpt;
             $this->description = $data->description;

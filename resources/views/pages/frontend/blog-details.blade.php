@@ -96,7 +96,7 @@
                                     {{ $data->title }}
                                 </h2>
 
-                                <div class="mb-8">
+                                <div class="mb-8 ck-content">
                                     {!! $data->description !!}
                                 </div>
 

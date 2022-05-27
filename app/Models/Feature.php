@@ -11,10 +11,9 @@ class Feature extends Model
 
     protected $fillable = [
         'team_id',
-        'image',
         'title',
         'excerpt',
-        'link'
+        'description'
     ];
 
     public function team()

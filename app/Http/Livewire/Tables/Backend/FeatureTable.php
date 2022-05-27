@@ -39,10 +39,6 @@ class FeatureTable extends LivewireDatatable
                 ->truncate(20)
                 ->label('Excerpt'),
 
-            Column::name('link')
-                ->searchable()
-                ->label('Link'),
-
             Column::callback(['id'], function ($id) {
                 return view('pages.backend.features.actions', ['id' => $id]);
             })->excludeFromExport()->unsortable()->label('Action'),

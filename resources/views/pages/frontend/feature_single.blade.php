@@ -25,12 +25,13 @@
                 // paste some BS5 embed code in place of the Figure tag
                 element.parentElement.outerHTML =
                     `
-                <p class="m-2 text-center"><a class="ml-6 text-white capitalize bg-blue-500 btn-sm hover:bg-blue-300" href="${href}">${text}</a></p>`;
+                <p class="m-2 text-center"><a class="ml-6 text-white capitalize bg-blue-500 btn-sm hover:bg-blue-300 rounded-lg p-4" href="${href}">${text}</a></p>`;
             });
         })
     </script>
 @endpush
 <x-guest-layout>
+    </ul>
     <!-- ====== Banner Section Start -->
     <x-frontend.banner>
         {{ $data->title }}
@@ -55,7 +56,7 @@
                                     </span>{{ $data->team->name }}
                                 </div>
 
-                                <div class="mb-8">
+                                <div class="mb-8 ck-content">
                                     {!! $data->description !!}
                                 </div>
 

@@ -184,8 +184,11 @@
                                 <h4 class="mb-2 text-lg font-semibold text-dark">
                                     {{ $item->name }}
                                 </h4>
-                                <p class="mb-5 text-sm font-medium text-body-color">
+                                <p class="mb-2 text-base font-medium text-body-color">
                                     {{ $item->qualification }}
+                                </p>
+                                <p class="mb-5 text-base font-medium text-body-color">
+                                    {{ $item->department }}
                                 </p>
                             </div>
                         </div>
