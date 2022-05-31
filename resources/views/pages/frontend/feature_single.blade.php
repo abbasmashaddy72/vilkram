@@ -52,8 +52,7 @@
                                 </h2>
 
                                 <div class="mb-8 text-xl">
-                                    <span class="text-2xl font-semibold">Surgery Performed by:
-                                    </span>{{ $data->team->name }}
+                                    <span class="text-2xl font-semibold">Performed by: </span>{{ $data->team->name }}
                                 </div>
 
                                 <div class="mb-8 ck-content">
@@ -74,7 +73,7 @@
                     <span class="h-[2px] bg-primary w-20 mb-10 inline-block"></span>
                 </div>
                 <!-- First Repeater -->
-                <div class="flex flex-wrap -mx-4 flex-col">
+                <div class="flex flex-wrap flex-col">
                     @foreach ($related as $item)
                         @include('components.frontend.feature')
                     @endforeach

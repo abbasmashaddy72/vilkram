@@ -20,55 +20,61 @@
                         <ul class="blcok lg:flex">
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('welcome') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('/*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }}">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('/*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }}">
                                     Home
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('features') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('feature*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('feature*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Services
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('teams') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('team*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('team*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Doctors
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('scheme') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('scheme*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('scheme*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Insurances
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('book_appointment') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('book_appointment*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('book_appointment*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Book Appointment
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('blogs') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('blog*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('blog*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Blogs
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
+                                <a href="{{ route('gallery') }}"
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('about-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
+                                    Gallery
+                                </a>
+                            </li>
+                            <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('contactUs') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('contact-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('contact-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Contact Us
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('aboutUs') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('about-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('about-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     About Us
                                 </a>
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('faqs') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 md:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('faqs*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-12">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('faqs*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     FAQ's
                                 </a>
                             </li>

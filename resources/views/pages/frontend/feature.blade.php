@@ -7,27 +7,17 @@
     <!-- ====== Features Section Start -->
     <section class="pt-20 pb-8" id="services">
         <div class="container">
-            <div class="grid lg:grid-cols-2 gap-24">
+            <div class="flex flex-wrap -mx-4">
                 @foreach ($features as $item)
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full px-4">
-                            <div class="mb-12 lg:mb-20 max-w-[620px]">
-                                <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
+                    <div class="w-full md:w-1/2 px-4">
+                        <div class="mb-10 group wow fadeInUp border-gray-200 border-2 p-4 rounded-lg shadow-testimonial flex-1 bg-white"
+                            data-wow-delay=".1s">
+                            <h3 class="text-center">
+                                <a href="{{ route('feature_team_collection', ['team_id' => $item->id]) }}"
+                                    class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl inline-block text-dark hover:text-primary">
                                     {{ $item->feature_title }}
-                                </h2>
-                                <p class="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
-                                    {{ $item->feature_excerpt }}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-4 flex-col">
-                            @forelse ($item->features as $data)
-                                @include('components.frontend.feature', ['item' => $data])
-                            @empty
-                                <div class="w-full px-4">
-                                    <div class="text-center font-bold text-gray-800 text-lg">No Data Available</div>
-                                </div>
-                            @endforelse
+                                </a>
+                            </h3>
                         </div>
                     </div>
                 @endforeach

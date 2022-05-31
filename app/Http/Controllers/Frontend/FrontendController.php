@@ -12,6 +12,7 @@ use App\Models\Scheme;
 use App\Models\Slider;
 use App\Models\Team;
 use App\Services\Helper;
+use Illuminate\Support\Facades\Storage;
 
 class FrontendController extends Controller
 {
@@ -111,6 +112,18 @@ class FrontendController extends Controller
     public function contact_us()
     {
         return view('pages.frontend.contact_us');
+    }
+
+    public function gallery()
+    {
+        /**
+         * @get('/gallery')
+         * @name('gallery')
+         * @middlewares('web')
+         */
+        $directories = Storage::disk('public')->directories('files/1');
+
+        return view('pages.frontend.gallery', compact('directories'));
     }
 
     public function faqs()

@@ -32,6 +32,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function () {
 
     Route::get('faqs', 'FrontendController@faqs')->name('faqs');
 
+    Route::get('gallery', 'FrontendController@gallery')->name('gallery');
+
     Route::get('blogs', 'FrontendController@blogs')->name('blogs');
 
     Route::get('blog/{id}', 'FrontendController@blog_single')->name('blog_single');

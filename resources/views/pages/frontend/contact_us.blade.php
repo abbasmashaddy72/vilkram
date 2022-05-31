@@ -13,9 +13,6 @@
                 <div class="px-4 w-full lg:w-7/12 xl:w-8/12">
                     <div class="ud-contact-content-wrapper">
                         <div class="ud-contact-title mb-12 lg:mb-[150px]">
-                            <span class="font-headingFont text-dark font-semibold text-base mb-5">
-                                CONTACT US
-                            </span>
                             <h2 class="text-[35px] font-semibold">
                                 Let's talk about <br />
                                 Love to hear from you!

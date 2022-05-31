@@ -20,7 +20,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-4 flex-col">
+                        <div class="flex flex-wrap flex-col">
                             @forelse ($item->features as $data)
                                 @include('components.frontend.feature', ['item' => $data])
                             @empty
