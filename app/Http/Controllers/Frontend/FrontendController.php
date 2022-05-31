@@ -77,6 +77,13 @@ class FrontendController extends Controller
         ]));
     }
 
+    public function team_single($id)
+    {
+        $data = Team::with('features', 'blogs')->findOrFail($id);
+
+        return view('pages.frontend.team_single', compact('data'));
+    }
+
     public function features()
     {
         $features = Team::with('features')->get();
@@ -84,6 +91,13 @@ class FrontendController extends Controller
         return view('pages.frontend.feature', compact([
             'features'
         ]));
+    }
+
+    public function feature_team_collection($team_id)
+    {
+        $data = Team::with('features')->where('id', $team_id)->get();
+
+        return view('pages.frontend.feature_team_collection', compact('data'));
     }
 
     public function feature_single($id)

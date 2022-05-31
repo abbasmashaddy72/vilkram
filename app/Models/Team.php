@@ -28,4 +28,9 @@ class Team extends Model
     {
         return $this->hasMany(Feature::class);
     }
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

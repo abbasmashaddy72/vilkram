@@ -15,8 +15,10 @@
                             <div class="lg:flex items-center justify-around border overflow-hidden shadow-testimonial">
                                 <div class="text-center">
                                     <div class="relative inline-block z-10">
-                                        <img src="{{ asset('storage/' . $item->image) }}" alt="image"
-                                            class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
+                                        <a href="{{ route('team_single', ['id' => $item->id]) }}">
+                                            <img src="{{ asset('storage/' . $item->image) }}" alt="image"
+                                                class="mx-auto lg:ml-auto w-80 h-96 rounded-lg object-cover" />
+                                        </a>
                                         <div class="mt-8">
                                             <a href="{{ route('book_appointment', ['team_id' => $item->id]) }}"
                                                 class="px-3 py-2 bg-primary font-semibold text-white text-lg rounded-xl hover:bg-secondary transition ease-in-out duration-500">Book
@@ -26,10 +28,12 @@
                                 </div>
                                 <div
                                     class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
-                                    <h2
-                                        class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
-                                        {{ $item->name }}
-                                    </h2>
+                                    <a href="{{ route('team_single', ['id' => $item->id]) }}">
+                                        <h2
+                                            class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
+                                            {{ $item->name }}
+                                        </h2>
+                                    </a>
                                     <p class="text-xl text-body-color mb-9 leading-relaxed">
                                         <span class="font-bold text-dark">Experience:</span>
                                         {{ $item->experience->diffInYears(now()) }} Years

@@ -20,7 +20,11 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function () {
 
     Route::get('teams', 'FrontendController@teams')->name('teams');
 
+    Route::get('team/{id}', 'FrontendController@team_single')->name('team_single');
+
     Route::get('features', 'FrontendController@features')->name('features');
+
+    Route::get('feature-team/{team_id}', 'FrontendController@feature_team_collection')->name('feature_team_collection');
 
     Route::get('feature/{id}', 'FrontendController@feature_single')->name('feature_single');
 

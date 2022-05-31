@@ -52,8 +52,10 @@
                     <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
                         <div class="mb-10 wow fadeInUp" data-wow-delay=".1s">
                             <div class="relative rounded-full z-10 mx-auto mb-6">
-                                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
-                                    class="w-full rounded-full h-96 w-80 object-cover" />
+                                <a href="{{ route('team_single', ['id' => $item->id]) }}">
+                                    <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
+                                        class="w-full rounded-full h-96 w-80 object-cover" />
+                                </a>
                                 <span class="absolute top-0 left-0 z-[-1]">
                                     <svg width="71" height="82" viewBox="0 0 71 82" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -181,9 +183,11 @@
                                 </span>
                             </div>
                             <div class="text-center">
-                                <h4 class="mb-2 text-lg font-semibold text-dark">
-                                    {{ $item->name }}
-                                </h4>
+                                <a href="{{ route('team_single', ['id' => $item->id]) }}">
+                                    <h4 class="mb-2 text-lg font-semibold text-dark">
+                                        {{ $item->name }}
+                                    </h4>
+                                </a>
                                 <p class="mb-2 text-base font-medium text-body-color">
                                     {{ $item->qualification }}
                                 </p>
@@ -226,7 +230,7 @@
                                 <div class="mb-10 group wow fadeInUp border-gray-200 border-2 p-4 rounded-lg shadow-testimonial flex-1 bg-white"
                                     data-wow-delay=".1s">
                                     <h3 class="text-center">
-                                        <a href="{{ route('features') }}"
+                                        <a href="{{ route('feature_team_collection', ['team_id' => $item->id]) }}"
                                             class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl inline-block text-dark hover:text-primary">
                                             {{ $item->feature_title }}
                                         </a>
