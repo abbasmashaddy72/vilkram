@@ -1,4 +1,4 @@
-<div class="relative px-8 py-8 xl:px-20 2xl:mx-auto 2xl:container">
+<div class="relative px-8 py-8 xl:px-20 2xl:mx-auto 2xl:container z-0">
     <div class="review-widget_net" data-uuid="{{ $gr_count_api }}" data-template="10" data-filter="" data-lang="en"
         data-theme="light">
         <center>

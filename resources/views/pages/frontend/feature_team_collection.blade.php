@@ -22,7 +22,7 @@
                         </div>
                         <div class="flex flex-wrap flex-col">
                             @forelse ($item->features as $data)
-                                @include('components.frontend.feature', ['item' => $data])
+                                @include('components.frontend.feature', ['item' => $data, 'team_id' => $item->id])
                             @empty
                                 <div class="w-full px-4">
                                     <div class="text-center font-bold text-gray-800 text-lg">No Data Available</div>

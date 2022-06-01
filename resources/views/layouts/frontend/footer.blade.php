@@ -144,7 +144,7 @@
             </div>
             @if (!Jenssegers\Agent\Facades\Agent::isMobile())
                 <div class="flex justify-center">
-                    <iframe src="{{ $embed_map_link }}" width="600" height="360" style="border:0;" allowfullscreen=""
+                    <iframe src="{{ $embed_map_link }}" width="750" height="360" style="border:0;" allowfullscreen=""
                         loading="lazy">
                     </iframe>
                 </div>
@@ -155,8 +155,8 @@
                     </iframe>
                 </div>
             @else
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="{{ $embed_map_link }}" width="600" height="200" style="border:0;" allowfullscreen=""
+                <div class="w-full mx-4 aspect-w-16 aspect-h-9">
+                    <iframe src="{{ $embed_map_link }}" width="500" height="200" style="border:0;" allowfullscreen=""
                         loading="lazy">
                     </iframe>
                 </div>

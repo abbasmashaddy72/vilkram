@@ -7,14 +7,13 @@
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact py-20 md:py-[120px] relative">
-        <div class="absolute z-[-1] w-full h-1/2 lg:h-[45%] xl:h-1/2 top-0 left-0 bg-[#96bcff]"></div>
+        <div class="absolute z-[-1] w-full h-1/2 lg:h-[45%] xl:h-1/2 top-0 left-0 bg-[#B8DDFF]"></div>
         <div class="container px-4">
             <div class="flex flex-wrap items-center -mx-4">
                 <div class="px-4 w-full lg:w-7/12 xl:w-8/12">
                     <div class="ud-contact-content-wrapper">
                         <div class="ud-contact-title mb-12 lg:mb-[150px]">
                             <h2 class="text-[35px] font-semibold">
-                                Let's talk about <br />
                                 Love to hear from you!
                             </h2>
                         </div>
@@ -30,7 +29,7 @@
                                 </div>
                                 <div>
                                     <h5 class="text-lg font-semibold mb-6">Our Location</h5>
-                                    <p class="text-base text-body-color">
+                                    <p class="text-lg text-body-color">
                                         {{ $address }}
                                     </p>
                                 </div>
@@ -45,11 +44,11 @@
                                 <div>
                                     <h5 class="text-lg font-semibold mb-6">How Can We Help?</h5>
                                     <a href="mail:{{ $email }}">
-                                        <p class="text-base text-body-color">{{ $email }}</p>
+                                        <p class="text-lg text-body-color">{{ $email }}</p>
                                     </a>
                                     @foreach ($contact_no as $item)
                                         <a href="tel:{{ $item }}">
-                                            <p class="text-base text-body-color">{{ $item }}</p>
+                                            <p class="text-lg text-body-color">{{ $item }}</p>
                                         </a>
                                     @endforeach
                                 </div>

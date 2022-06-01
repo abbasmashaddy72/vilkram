@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-around -mx-4">
+            <div class="flex flex-wrap justify-around">
                 @foreach ($teams as $item)
                     <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
                         <div class="mb-10 wow fadeInUp" data-wow-delay=".1s">
@@ -210,11 +210,8 @@
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full px-4">
                     <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
-                        <span class="block mb-2 text-lg font-semibold text-primary">
-                            Services
-                        </span>
                         <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
-                            Services Performed by Doctors in Our Clinic
+                            Services at Our Center
                         </h2>
                         <p class="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
                             {{ $features_excerpt }}

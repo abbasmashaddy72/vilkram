@@ -76,7 +76,7 @@ class TeamCEV extends Component
             $this->qualification = $data->qualification;
             $this->department = $data->department;
             $this->about = $data->about;
-            $this->experience = $data->experience;
+            $this->experience = $data->experience->format('Y-m-d');
             $this->feature_title = $data->feature_title;
             $this->feature_excerpt = $data->feature_excerpt;
         }

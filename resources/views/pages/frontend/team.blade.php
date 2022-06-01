@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
+                                    class="lg:max-w-[565px] xl:max-w-[640px] w-full py-8 px-7 sm:px-12 md:p-16 lg:py-8 lg:px-16">
                                     <a href="{{ route('team_single', ['id' => $item->id]) }}">
                                         <h2
                                             class="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
@@ -44,7 +44,7 @@
                                         <span class="font-bold text-dark">Department:</span>
                                         {{ $item->department }}
                                     </p>
-                                    <p class="text-xl text-body-color mb-9 leading-relaxed text-justify">
+                                    <p class="text-xl text-body-color text-justify whitespace-pre-line">
                                         <span class="font-bold text-dark">Profile:</span><br>{{ $item->about }}
                                     </p>
                                 </div>

@@ -4,7 +4,7 @@
     </x-frontend.banner>
     <section class="pt-20 pb-8" id="services">
         <div class="container">
-            <div class="flex flex-wrap -mx-4">
+            <div class="flex flex-wrap">
                 <!-- First Repeater -->
                 @foreach ($directories as $path)
                     <h1 class="font-semibold text-gray-900 text-xl md:text-4xl text-left mb-16">

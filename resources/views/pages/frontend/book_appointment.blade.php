@@ -7,7 +7,7 @@
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact py-20 md:py-[120px] relative">
-        <div class="absolute z-[-1] w-full h-1/2 lg:h-[45%] xl:h-1/2 top-0 left-0 bg-[#96bcff]"></div>
+        <div class="absolute z-[-1] w-full h-1/2 lg:h-[45%] xl:h-1/2 top-0 left-0 bg-[#B8DDFF]"></div>
         <div class="container px-4">
             <div class="flex flex-col justify-center items-center -mx-4">
                 <div class="px-4 w-full lg:w-5/12 xl:w-4/12">

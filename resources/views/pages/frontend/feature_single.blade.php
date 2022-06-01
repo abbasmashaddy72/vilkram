@@ -46,16 +46,19 @@
                     <div class="flex flex-col justify-center items-center -mx-4">
                         <div class="w-full px-4">
                             <div>
-                                <h2 class="font-bold text-dark text-[26px] sm:text-3xl md:text-4xl leading-snug sm:leading-snug md:leading-snug mb-6 wow fadeInUp"
-                                    data-wow-delay=".1s">
-                                    {{ $data->title }}
-                                </h2>
-
-                                <div class="mb-8 text-xl">
-                                    <span class="text-2xl font-semibold">Performed by: </span>{{ $data->team->name }}
+                                <div class="flex in-line items-center">
+                                    <div class="items-center px-4 flex mb-6">
+                                        <img src={{ asset('images/svg/li-logo.png') }} class="h-16 w-auto" />
+                                    </div>
+                                    <div>
+                                        <h2 class="font-bold text-dark text-[26px] sm:text-3xl md:text-4xl leading-snug sm:leading-snug md:leading-snug mb-6 wow fadeInUp"
+                                            data-wow-delay=".1s">
+                                            {{ $data->title }}
+                                        </h2>
+                                    </div>
                                 </div>
 
-                                <div class="mb-8 ck-content">
+                                <div class="mb-8 ck-content text-lg">
                                     {!! $data->description !!}
                                 </div>
 
@@ -75,7 +78,7 @@
                 <!-- First Repeater -->
                 <div class="flex flex-wrap flex-col">
                     @foreach ($related as $item)
-                        @include('components.frontend.feature')
+                        @include('components.frontend.feature', ['team_id' => $item->team_id])
                     @endforeach
                 </div>
             </div>

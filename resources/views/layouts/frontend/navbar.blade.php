@@ -56,7 +56,7 @@
                             </li>
                             <li class="relative group py-2 lg:py-0 mx-8 lg:mx-0">
                                 <a href="{{ route('gallery') }}"
-                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('about-us*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
+                                    class="font-semibold text-dark lg:py-6 lg:inline-flex lg:px-0 lg:mr-0 lg:text-gray-50 transition ease-in-out duration-300 mb-5 lg:mb-0 lg:hover:scale-125 lg:hover:rotate-6 {{ Request::is('gallery*') ? 'md:underline md:underline-offset-2 md:decoration-gray-50 md:decoration-4' : '' }} lg:ml-7 xl:ml-10">
                                     Gallery
                                 </a>
                             </li>
