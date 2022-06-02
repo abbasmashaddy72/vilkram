@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mb-8 ck-content text-lg">
+                                <div class="mb-8 ck-content text-xl">
                                     {!! $data->description !!}
                                 </div>
 

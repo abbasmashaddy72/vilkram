@@ -5,7 +5,7 @@
         <div class="flex flex-wrap -mx-4">
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
                 <div class="w-full mb-10">
-                    <a href="{{ route('welcome') }}" class="inline-block max-w-[160px] mb-6">
+                    <a href="{{ route('welcome') }}" class="inline-block max-w-[120px] mb-6">
                         <img src="{{ asset('storage/' . $logo) }}" alt="logo" class="max-w-full" />
                     </a>
                     <div class="flex justify-start max-w-xs text-gray-50">

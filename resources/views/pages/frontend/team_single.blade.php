@@ -9,31 +9,31 @@
         <div class="container">
             <div class="flex flex-wrap justify-center">
                 <div class="w-full px-4">
-                    <div class="lg:flex items-center justify-between overflow-hidden">
+                    <div class="lg:flex items-center justify-around overflow-hidden">
                         <div class="text-center">
                             <div class="relative inline-block z-10">
                                 <img src="{{ asset('storage/' . $data->image) }}" alt="{{ $data->name }}"
-                                    class="mx-auto lg:ml-auto" />
+                                    class="mx-auto lg:ml-auto max-h-[40rem] w-auto object-fit" />
                             </div>
                         </div>
                         <div
-                            class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[70px]">
+                            class="lg:max-w-[565px] xl:max-w-[640px] w-full py-12 px-7 sm:px-12 md:p-16 lg:py-9 lg:px-16 xl:p-[35px]">
                             <div class="font-bold text-xl sm:text-2xl 2xl:text-[30px] sm:leading-snug text-dark mb-3">
                                 Qualification:
-                                <p class="text-lg text-dark inline">
+                                <p class="text-xl text-dark inline">
                                     {{ $data->qualification }}
                                 </p>
                             </div>
                             <div class="font-bold text-xl sm:text-2xl 2xl:text-[30px] sm:leading-snug text-dark mb-3">
                                 Department:
-                                <p class="text-lg text-dark inline">
+                                <p class="text-xl text-dark inline">
                                     {{ $data->department }}
                                 </p>
                             </div>
-                            <div class="font-bold text-xl sm:text-2xl 2xl:text-[30px] sm:leading-snug text-dark mb-3">
+                            <div class="font-bold text-xl sm:text-2xl 2xl:text-[30px] sm:leading-snug text-dark">
                                 Profile:
                             </div>
-                            <p class="text-base text-body-color mb-3 leading-relaxed whitespace-pre-line">
+                            <p class="text-xl text-body-color mb-3 leading-relaxed whitespace-pre-line">
                                 {{ $data->about }}
                             </p>
                             <div class="text-center mt-10">

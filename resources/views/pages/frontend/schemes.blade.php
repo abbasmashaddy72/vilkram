@@ -14,17 +14,15 @@
                         <div class="mb-10 group wow fadeInUp border-gray-200 border-2 p-4 rounded-lg shadow-testimonial flex-1 bg-white"
                             data-wow-delay=".1s">
                             <div class="rounded overflow-hidden mb-8">
-                                <a href="{{ $item->link }}" class="block" target="_blank">
-                                    <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
-                                        class="w-full transition group-hover:scale-125 group-hover:rotate-6 h-40 md:h-56 object-cover" />
-                                </a>
+                                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
+                                    class="w-full transition group-hover:scale-125 group-hover:rotate-6 h-40 md:h-56 object-cover" />
                             </div>
                             <div>
                                 <h3>
-                                    <a href="{{ $item->link }}"
-                                        class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl mb-4 inline-block text-dark hover:text-primary">
+                                    <div
+                                        class="font-semibold teloginxt-xl sm:text-2xl lg:text-xl xl:text-2xl mb-4 inline-block text-dark">
                                         {{ $item->name }}
-                                    </a>
+                                    </div>
                                 </h3>
                             </div>
                         </div>
