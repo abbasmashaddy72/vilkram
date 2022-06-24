@@ -12,6 +12,7 @@ use App\Models\Scheme;
 use App\Models\Slider;
 use App\Models\Team;
 use App\Services\Helper;
+use DirectoryIterator;
 use Illuminate\Support\Facades\Storage;
 
 class FrontendController extends Controller
@@ -27,7 +28,7 @@ class FrontendController extends Controller
         view()->share('google_business', Helper::get_static_option('google_business'));
         view()->share('embed_map_link', Helper::get_static_option('embed_map_link'));
         view()->share('email', Helper::get_static_option('email'));
-        view()->share('contact_no', explode(')', Helper::get_static_option('contact_no')));
+        view()->share('contact_no', explode(';', Helper::get_static_option('contact_no')));
         view()->share('address', Helper::get_static_option('address'));
     }
 
@@ -121,7 +122,14 @@ class FrontendController extends Controller
          * @name('gallery')
          * @middlewares('web')
          */
-        $directories = Storage::disk('public')->directories('files/1');
+        // Just How I wanted
+        $dir = Storage::disk('public')->directories('files');
+
+        for ($i = 0; $i < count($dir); $i++) {
+            $directories[$i] = Storage::disk('public')->directories($dir[$i]);
+        }
+
+        $directories = array_filter($directories);
 
         return view('pages.frontend.gallery', compact('directories'));
     }
